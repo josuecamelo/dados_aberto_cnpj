@@ -49,8 +49,6 @@ def cnpj_full(input_list, tipo_output, output_path):
             with z.open(csvFile) as f:
                 df = pd.read_csv(f, sep=';', header=None, encoding='ISO-8859-1', na_filter=False, low_memory=False)
                 for row in df.iterrows():
-                    print(row)
-
                     sql = "INSERT INTO empresas(cnpj_basico, razao_social, natureza_juridica, qualificacao_responsavel, capital_social, porte_empresa, ente_federativo_resp) " \
                         "VALUES ('" + str(row[1][0]).zfill(8) + "', '" + escapeSpecialCharacters(str(row[1][1])) + "', '" + str(row[1][2]) + "'" \
                         ", '" + str(row[1][3]) + "', '" + str(row[1][4]) + "', '" + str(row[1][5]).zfill(2) + "', '" + escapeSpecialCharacters(str(row[1][6])) + "');"

@@ -265,6 +265,7 @@ def cnpj_full(input_list, tipo_output, output_path):
                             + str(row[1][5]) + "', '" + str(row[1][6]) + "', '" + str(row[1][7]) + "', '" + str(escapeSpecialCharacters(row[1][8])) + "', '" + str(row[1][9]) + "', '" + str(row[1][10]) + "', '" + str(row[1][11]) + "', '" + str(row[1][12]) + "', '" + str(row[1][13]) + "', '" + str(escapeSpecialCharacters(row[1][14])) + "', '" + str(row[1][15]).replace("'", "") + "', " \
                             "'" + str(escapeSpecialCharacters(row[1][16])) + "', '" + str(escapeSpecialCharacters(row[1][17])) + "', '" + str(row[1][18]) + "', '" + str(row[1][19]) + "', '" + str(row[1][20]) + "', '" + str(row[1][21]) + \
                             "', '" + str(row[1][22]) + "', '" + str(row[1][23]) + "', '" + str(row[1][24]) + "', '" + str(row[1][25]) + "', '" + str(row[1][26]) + "', '" + str(row[1][27].lower()).replace("'", "") + "', '" + str(row[1][28]) + "', '" + str(row[1][29]) + "');"
+
                     cursor.execute(sql)
                     conexaoDB.commit()
 

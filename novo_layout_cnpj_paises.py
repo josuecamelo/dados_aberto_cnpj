@@ -49,8 +49,7 @@ def cnpj_full(input_list, tipo_output, output_path):
             with z.open(csvFile) as f:
                 df = pd.read_csv(f, sep=';', header=None, encoding='ISO-8859-1', na_filter=False, low_memory=False)
                 for row in df.iterrows():
-                    sql = "INSERT INTO paises(codigo, descricao) VALUES ('" + str(row[1][0]).zfill(
-                        8) + "', '" + escapeSpecialCharacters(str(row[1][2])) + "');"
+                    sql = "INSERT INTO paises(codigo, descricao) VALUES ('" + str(row[1][0]).zfill(3) + "', '" + escapeSpecialCharacters(str(row[1][1])) + "');"
                     cursor.execute(sql)
                     conexaoDB.commit()
 
